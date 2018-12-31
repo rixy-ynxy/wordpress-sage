@@ -6,9 +6,9 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-    public function members_loop() {
+    public function quest_loop() {
         $args = array(
-            'post_type' => 'members',
+            'post_type' => 'quest',
             'orderby' => 'desc',
         );
         $the_query = new \WP_Query($args);

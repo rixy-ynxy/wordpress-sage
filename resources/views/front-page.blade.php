@@ -16,8 +16,8 @@
   </div>
   @include('partials.page-header')
   <div class="row">
-  @while($members_loop->have_posts()) @php($members_loop->the_post())
-    @include('partials.content-list')
+  @while($quest_loop->have_posts()) @php($quest_loop->the_post())
+    @include('partials.content-'.get_post_type())
   @endwhile
   @php(wp_reset_postdata())
   </div>
