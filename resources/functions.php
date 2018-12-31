@@ -91,24 +91,24 @@ Container::getInstance()
         ]);
     }, true);
 
-add_action('init', 'create_post_type');
-function create_post_type() {
-    register_post_type('members', [
-        'labels' => [
-            'name' => 'メンバー',
-            'singular_name' => 'members'
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'menu_position' => 5,
-    ]);
-        register_post_type('quest', [
-        'labels' => [
-            'name' => '案件クエスト',
-            'singular_name' => 'quest'
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'menu_position' => 5,
-    ]);
-}
+// add_action('init', 'create_post_type');
+// function create_post_type() {
+//     register_post_type('members', [
+//         'labels' => [
+//             'name' => 'メンバー',
+//             'singular_name' => 'members'
+//         ],
+//         'public' => true,
+//         'has_archive' => true,
+//         'menu_position' => 5,
+//     ]);
+//         register_post_type('quest', [
+//         'labels' => [
+//             'name' => '案件クエスト',
+//             'singular_name' => 'quest'
+//         ],
+//         'public' => true,
+//         'has_archive' => true,
+//         'menu_position' => 5,
+//     ]);
+// }
