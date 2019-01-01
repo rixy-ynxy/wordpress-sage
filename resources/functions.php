@@ -91,24 +91,60 @@ Container::getInstance()
         ]);
     }, true);
 
-// add_action('init', 'create_post_type');
-// function create_post_type() {
-//     register_post_type('members', [
-//         'labels' => [
-//             'name' => 'メンバー',
-//             'singular_name' => 'members'
-//         ],
-//         'public' => true,
-//         'has_archive' => true,
-//         'menu_position' => 5,
-//     ]);
-//         register_post_type('quest', [
-//         'labels' => [
-//             'name' => '案件クエスト',
-//             'singular_name' => 'quest'
-//         ],
-//         'public' => true,
-//         'has_archive' => true,
-//         'menu_position' => 5,
-//     ]);
-// }
+function manual_add_dashboard_widgets() {
+    wp_add_dashboard_widget (
+        'manual_dashboard_widget',
+        'RemoCa機能管理',
+        'manual_dashboard_widget_function'
+    );
+}
+function manual_dashboard_widget_function() {
+    echo '
+    <section class="useTool">
+    <h2>利用ツール</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ツール名</th>
+                <th scope="col">招待コード</th>
+                <th scope="col">ツールURL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">プロジェクト</th>
+                <td><a href="https://trello.com/invite/b/tmCiVHG4/17e871528fb58ce5507b73d44a9aebc9/%E8%82%B2%E5%85%90%C3%97%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC">Trelloプロジェクト</a></td>
+                <td><a href="https://trello.com/b/tmCiVHG4/remoca">https://trello.com/b/tmCiVHG4/remoca</a></td>
+            </tr>
+            <tr>
+                <th scope="row">質問カード</th>
+                <td><a href="https://trello.com/invite/b/kVbOuxOC/722b587219cfaeffe348485442cdfb20/remoca-%E8%B3%AA%E5%95%8F%E3%82%84%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8free">Trello質問</a></td>
+                <td><a href="https://trello.com/b/kVbOuxOC">https://trello.com/b/kVbOuxOC</a></td>
+            </tr>            
+            <tr>
+                <th scope="row">Slack</th>
+                <td><a href="https://ikuji-creator.herokuapp.com/">登録</a></td>
+                <td>ikuji-creator.slack.com</td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+    <section class="manual">
+        <h2>ルール</h2>
+        <ul>
+            <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
+            <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
+            <li><a href="https://community.remoca.net/subcontracting/">業務委託契約</a></li>
+            <li><a href="https://community.remoca.net/nda/">秘密保持契約</a></li>
+        </ul>
+    </section>
+    ';
+}
+add_action('wp_dashboard_setup', 'manual_add_dashboard_widgets');
+
+function remove_dashboard_widget() {
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_primary', 'dashboard', 'side');
+}
+add_action('wp_dashboard_setup', 'remove_dashboard_widget');
