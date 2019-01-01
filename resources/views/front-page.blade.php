@@ -14,14 +14,5 @@
     @include('partials.content-'.get_post_type())
   @endwhile
   </div>
-  @include('partials.page-header')
-  <div class="row">
-  @while($quest_loop->have_posts()) @php($quest_loop->the_post())
-    @include('partials.content-'.get_post_type())
-  @endwhile
-  @php(wp_reset_postdata())
-  </div>
-
-
   {!! get_the_posts_navigation() !!}
 @endsection
