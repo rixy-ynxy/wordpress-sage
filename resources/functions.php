@@ -133,11 +133,18 @@ function manual_dashboard_widget_function() {
         <h2>ルール</h2>
         <ul>
             <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
-            <li>プライバシーポリシー</li>
-            <li>業務委託契約</li>
-            <li>秘密保持契約</li>
+            <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
+            <li><a href="https://community.remoca.net/subcontracting/">業務委託契約</a></li>
+            <li><a href="https://community.remoca.net/nda/">秘密保持契約</a></li>
         </ul>
     </section>
     ';
 }
 add_action('wp_dashboard_setup', 'manual_add_dashboard_widgets');
+
+function remove_dashboard_widget() {
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_primary', 'dashboard', 'side');
+}
+add_action('wp_dashboard_setup', 'remove_dashboard_widget');
