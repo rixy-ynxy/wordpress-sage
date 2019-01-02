@@ -91,16 +91,34 @@ Container::getInstance()
         ]);
     }, true);
 
-function manual_add_dashboard_widgets() {
-    wp_add_dashboard_widget (
-        'manual_dashboard_widget',
-        'RemoCa機能管理',
-        'manual_dashboard_widget_function'
-    );
+function remove_dashboard_widget() {
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_primary', 'dashboard', 'side');
 }
-function manual_dashboard_widget_function() {
-    echo '
-    <section class="useTool">
+add_action('wp_dashboard_setup', 'remove_dashboard_widget');
+
+function site_manual() {
+    ?>
+    <div class="wrapper">
+        <h1>RemoCa規約</h1>
+        <ul>
+            <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
+            <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
+            <li><a href="https://community.remoca.net/subcontracting/">業務委託契約</a></li>
+            <li><a href="https://community.remoca.net/nda/">秘密保持契約</a></li>
+        </ul>
+        <h2></h2>
+        <p></p>
+        <h2></h2>
+        <p></p>
+    </div>
+    <?php
+}
+function site_manual_sub1() {
+    ?>
+    <div class="wrapper">
+        <section class="useTool">
     <h2>利用ツール</h2>
     <table class="table table-bordered">
         <thead>
@@ -128,23 +146,12 @@ function manual_dashboard_widget_function() {
             </tr>
         </tbody>
     </table>
-    </section>
-    <section class="manual">
-        <h2>ルール</h2>
-        <ul>
-            <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
-            <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
-            <li><a href="https://community.remoca.net/subcontracting/">業務委託契約</a></li>
-            <li><a href="https://community.remoca.net/nda/">秘密保持契約</a></li>
-        </ul>
-    </section>
-    ';
+    </section>    
+    </div>
+    <?php
 }
-add_action('wp_dashboard_setup', 'manual_add_dashboard_widgets');
-
-function remove_dashboard_widget() {
-    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
-    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
-    remove_meta_box('dashboard_primary', 'dashboard', 'side');
+function site_manuals() {
+    add_menu_page('RemoCaトリセツ', 'RemoCaトリセツ', 'manage_options', 'manual', 'site_manual');
+    add_submenu_page('manual', 'Ver1.1', 'Ver1.1', 'manage_options', 'site_manual_sub1', 'site_manual_sub1');
 }
-add_action('wp_dashboard_setup', 'remove_dashboard_widget');
+add_action('admin_menu', 'site_manuals', 5, 5);
