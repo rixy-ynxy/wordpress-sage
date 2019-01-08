@@ -104,13 +104,14 @@ function site_manual() {
         <h1>RemoCa規約</h1>
         <ul>
             <?php if(current_user_can('administrator')) {
-            echo '<li><a href="https://community.remoca.net/conferences">運営組織について</a></li>';
+            echo '<li><a href="/conferences">運営組織について</a></li>
+                    <li><a href="/conferences-tool">運営の利用ツール</a></li>';
             }?>
-            <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
-            <li><a href="https://community.remoca.net/how_to_use">登録から使い方まで</a></li>
-            <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
-            <li><a href="https://community.remoca.net/subcontracting/">RemoCAとの業務委託契約</a></li>
-            <li><a href="https://community.remoca.net/nda/">RemoCAとの秘密保持契約について</a></li>
+            <li><a href="/manual/">トリセツ</a></li>
+            <li><a href="/how_to_use">登録から使い方まで</a></li>
+            <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
+            <li><a href="/subcontracting/">RemoCAとの業務委託契約</a></li>
+            <li><a href="/nda/">RemoCAとの秘密保持契約について</a></li>
         </ul>
         <h2></h2>
         <p></p>
@@ -123,7 +124,7 @@ function site_manual_sub1() {
     ?>
     <div class="wrapper">
         <?php 
-            $page_info = get_page_by_title('manual');
+            $page_info = get_page_by_title('tool-manual');
             echo apply_filters('the_content', $page_info->post_content);
         ?>
     </div>
