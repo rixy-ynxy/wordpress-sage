@@ -103,10 +103,14 @@ function site_manual() {
     <div class="wrapper">
         <h1>RemoCa規約</h1>
         <ul>
+            <?php if(current_user_can('administrator')) {
+            echo '<li><a href="https://community.remoca.net/conferences">運営組織について</a></li>';
+            }?>
             <li><a href="https://community.remoca.net/manual/">トリセツ</a></li>
+            <li><a href="https://community.remoca.net/how_to_use">登録から使い方まで</a></li>
             <li><a href="https://community.remoca.net/privacy-policy/">プライバシーポリシー</a></li>
-            <li><a href="https://community.remoca.net/subcontracting/">業務委託契約</a></li>
-            <li><a href="https://community.remoca.net/nda/">秘密保持契約</a></li>
+            <li><a href="https://community.remoca.net/subcontracting/">RemoCAとの業務委託契約</a></li>
+            <li><a href="https://community.remoca.net/nda/">RemoCAとの秘密保持契約について</a></li>
         </ul>
         <h2></h2>
         <p></p>
@@ -118,40 +122,22 @@ function site_manual() {
 function site_manual_sub1() {
     ?>
     <div class="wrapper">
-        <section class="useTool">
-    <h2>利用ツール</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">ツール名</th>
-                <th scope="col">招待コード</th>
-                <th scope="col">ツールURL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">プロジェクト</th>
-                <td><a href="https://trello.com/invite/b/tmCiVHG4/17e871528fb58ce5507b73d44a9aebc9/%E8%82%B2%E5%85%90%C3%97%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC">Trelloプロジェクト</a></td>
-                <td><a href="https://trello.com/b/tmCiVHG4/remoca">https://trello.com/b/tmCiVHG4/remoca</a></td>
-            </tr>
-            <tr>
-                <th scope="row">質問カード</th>
-                <td><a href="https://trello.com/invite/b/kVbOuxOC/722b587219cfaeffe348485442cdfb20/remoca-%E8%B3%AA%E5%95%8F%E3%82%84%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8free">Trello質問</a></td>
-                <td><a href="https://trello.com/b/kVbOuxOC">https://trello.com/b/kVbOuxOC</a></td>
-            </tr>            
-            <tr>
-                <th scope="row">Slack</th>
-                <td><a href="https://ikuji-creator.herokuapp.com/">登録</a></td>
-                <td>ikuji-creator.slack.com</td>
-            </tr>
-        </tbody>
-    </table>
-    </section>    
+        <?php 
+            $page_info = get_page_by_title('manual');
+            echo apply_filters('the_content', $page_info->post_content);
+        ?>
     </div>
     <?php
 }
 function site_manuals() {
-    add_menu_page('RemoCaトリセツ', 'RemoCaトリセツ', 'manage_options', 'manual', 'site_manual');
-    add_submenu_page('manual', 'Ver1.1', 'Ver1.1', 'manage_options', 'site_manual_sub1', 'site_manual_sub1');
+    add_menu_page('RemoCaトリセツ', 'RemoCaトリセツ', 'manage_options', 'manual', 'site_manual', '', '', 3);
+    add_submenu_page('manual', '利用ツールのマニュアル', '利用ツールのマニュアル', 'manage_options', 'site_manual_sub1', 'site_manual_sub1');
 }
-add_action('admin_menu', 'site_manuals', 5, 5);
+
+function add_manual_menu() {
+  add_menu_page( '', 'マニュアル', 'manage_options', 'manual', 'include_manual_page', 'dashicons-editor-help' );
+}
+
+add_action('admin_menu', 'site_manuals');
+
+
