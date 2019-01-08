@@ -103,40 +103,49 @@ function site_manual() {
     <div class="wrapper">
         <h1>RemoCa規約</h1>
         <ul>
-            <?php if(current_user_can('administrator')) {
-            echo '<li><a href="/conferences">運営組織について</a></li>
-                    <li><a href="/conferences-tool">運営の利用ツール</a></li>';
-            }?>
             <li><a href="/manual/">トリセツ</a></li>
             <li><a href="/how_to_use">登録から使い方まで</a></li>
             <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
             <li><a href="/subcontracting/">RemoCAとの業務委託契約</a></li>
             <li><a href="/nda/">RemoCAとの秘密保持契約について</a></li>
         </ul>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <p></p>
     </div>
     <?php
-}
-function site_manual_sub1() {
-    ?>
-    <div class="wrapper">
-        <?php 
-            $page_info = get_page_by_title('tool-manual');
-            echo apply_filters('the_content', $page_info->post_content);
-        ?>
-    </div>
-    <?php
-}
-function site_manuals() {
-    add_menu_page('RemoCaトリセツ', 'RemoCaトリセツ', 'manage_options', 'manual', 'site_manual', '', '', 3);
-    add_submenu_page('manual', '利用ツールのマニュアル', '利用ツールのマニュアル', 'manage_options', 'site_manual_sub1', 'site_manual_sub1');
 }
 
-function add_manual_menu() {
-  add_menu_page( '', 'マニュアル', 'manage_options', 'manual', 'include_manual_page', 'dashicons-editor-help' );
+    function site_manual_sub1() {
+    ?>
+        <div class="wrapper">
+            <h1>運営が利用するツール</h1>
+            <?php 
+                $page_info = get_page_by_path('conferences-tool');
+                echo apply_filters('the_content', $page_info->post_content);
+            ?>
+        </div>
+        <?php
+    }
+
+function site_manuals() {
+    add_menu_page(
+        'RemoCaトリセツ',
+        'RemoCaトリセツ',
+        'edit_themes',
+        'manual',
+        'site_manual',
+        '',
+        2
+    );
+    if(current_user_can('administrator')) {
+        add_menu_page(
+            '運営ツール',
+            '運営ツール',
+            'manage_options',
+            'conferences-tool',
+            'site_manual_sub1',
+            '',
+            3
+        );
+    }
 }
 
 add_action('admin_menu', 'site_manuals');
