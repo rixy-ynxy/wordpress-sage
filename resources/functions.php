@@ -102,13 +102,10 @@ function site_manual() {
     ?>
     <div class="wrapper">
         <h1>RemoCa規約</h1>
-        <ul>
-            <li><a href="/manual/">トリセツ</a></li>
-            <li><a href="/how_to_use">登録から使い方まで</a></li>
-            <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
-            <li><a href="/subcontracting/">RemoCAとの業務委託契約</a></li>
-            <li><a href="/nda/">RemoCAとの秘密保持契約について</a></li>
-        </ul>
+            <?php 
+                $page_info = get_page_by_path('remoca-manual');
+                echo apply_filters('the_content', $page_info->post_content);
+            ?>
     </div>
     <?php
 }
