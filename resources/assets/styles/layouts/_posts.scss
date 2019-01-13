@@ -1,5 +1,26 @@
 .archive {
   padding: 1% 20px;
-  background: whitesmoke;
-  border: 3px solid white;
+  background: white;
+  border: 2px solid #d7eeff;
+  border-radius: 5px;
+}
+
+.entry-title {
+  font-size: 1.4em;
+  margin-bottom: 3%;
+  border-bottom: solid 4px rgba(76, 175, 80, 0.6);
+  border-radius: 0 0 160px 180px/0 0 20px 4px;
+}
+
+time.updated {
+  font-size: small;
+}
+
+.entry-content h3 {
+  font-size: 1.3em;
+  padding: 0.5em;
+  color: #494949;
+  background-color: #fffaf4;
+  border-left: solid 5px #ffaf58;
+  width: 35%;
 }
