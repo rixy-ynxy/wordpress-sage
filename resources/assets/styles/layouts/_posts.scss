@@ -27,13 +27,7 @@ time.updated {
 
 iframe.wp-embedded-content {
   max-width: 330px;
+  height: 400px;
   display: block;
   margin: auto;
-}
-
-@media (min-width: 768px) {
-  iframe.wp-embedded-content {
-    display: inline-block;
-    text-align: left;
-  }
 }
