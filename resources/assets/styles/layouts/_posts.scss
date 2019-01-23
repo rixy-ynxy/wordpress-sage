@@ -24,3 +24,10 @@ time.updated {
   border-left: solid 5px #ffaf58;
   width: 35%;
 }
+
+iframe.wp-embedded-content {
+  max-width: 330px;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
