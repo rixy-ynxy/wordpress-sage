@@ -1,8 +1,9 @@
 .archive {
   padding: 1% 20px;
   background: white;
-  border: 2px solid #d7eeff;
-  border-radius: 5px;
+  border-bottom: 1px solid lightgray;
+  max-width: 600px;
+  margin: auto;
 }
 
 .entry-title {
@@ -30,4 +31,32 @@ iframe.wp-embedded-content {
   height: 400px;
   display: block;
   margin: auto;
+}
+
+.archive header {
+  flex: 5;
+}
+
+.entry-summary {
+  flex: 2;
+  position: relative;
+}
+
+.archive h2.entry-title {
+  font-size: 1em;
+  border: none;
+  margin-right: 20px;
+}
+
+.archive time.updated {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.archive p.ibyline.author.vcard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
 }
