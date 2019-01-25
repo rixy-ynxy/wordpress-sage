@@ -78,7 +78,11 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
+<<<<<<< .merge_file_QqO83t
         'before_widget' => '<section class="widget col-md-3 col-6 %1$s">',
+=======
+        'before_widget' => '<section class="widget col-md-3 %1$s">',
+>>>>>>> .merge_file_SuWNy1
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
@@ -91,6 +95,10 @@ add_action('widgets_init', function () {
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Ads', 'sage'),
+        'id'            => 'footerads-primary'
+        ] + $config);
 });
 
 /**
@@ -130,19 +138,4 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
-});
-
-
-
-add_action('widgets_init', function () {
-	$config = [
-			'before_widget' => '<section class="widget %1$s %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h4 class="footer-title">',
-			'after_title'   => '</h4>'
-	];
-		register_sidebar([
-			'name' => __('Footer Ads', 'sage'),
-			'id' => 'footerads-primary'
-			] + $config);
 });
