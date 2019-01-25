@@ -131,3 +131,18 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+
+
+add_action('widgets_init', function () {
+	$config = [
+			'before_widget' => '<section class="widget %1$s %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="footer-title">',
+			'after_title'   => '</h4>'
+	];
+		register_sidebar([
+			'name' => __('Footer Ads', 'sage'),
+			'id' => 'footerads-primary'
+			] + $config);
+});
