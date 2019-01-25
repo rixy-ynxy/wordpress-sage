@@ -78,11 +78,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-<<<<<<< .merge_file_QqO83t
         'before_widget' => '<section class="widget col-md-3 col-6 %1$s">',
-=======
-        'before_widget' => '<section class="widget col-md-3 %1$s">',
->>>>>>> .merge_file_SuWNy1
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
