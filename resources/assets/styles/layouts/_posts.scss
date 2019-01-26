@@ -76,3 +76,47 @@ iframe.wp-embedded-content {
 .ibyline.author.vcard img {
   border-radius: 100%;
 }
+
+// ページネーション
+.pagination {
+  display: flex;
+  margin: 30px;
+  text-align: center;
+}
+
+.pagination ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination li {
+  display: inline-block;
+  width: auto;
+}
+
+.pagination li .page-numbers {
+  font-size: 0.9em;
+  display: block;
+  width: 30px;
+  margin: 0 5px;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #2d3877;
+  border: 1px solid #2d3877;
+  border-radius: 3px;
+}
+
+a.page-numbers:hover {
+  background-color: #b7c0f8;
+}
+
+.pagination li span.page-numbers.current {
+  color: #fff;
+  background-color: #2d3877;
+}
+
+.pagination li .dots {
+  border-color: transparent;
+  width: 50%;
+}
