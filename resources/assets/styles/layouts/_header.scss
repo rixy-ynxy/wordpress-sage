@@ -5,3 +5,7 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.navbar-toggler-icon i.fas.fa-bars {
+  margin-top: 4px;
+}
