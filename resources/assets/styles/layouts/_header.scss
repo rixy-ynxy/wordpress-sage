@@ -1,9 +1,31 @@
+.navbar {
+  width: 600px;
+  margin: 0 auto;
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
 
 .banner .nav a {
   @extend .nav-link;
+}
+
+.banner .navbar a {
+  // background-color: #ffc107;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  border-radius: 3px;
+}
+
+.banner .navbar a:hover {
+  transform: translateY(-3px);
+  font-weight: 500;
+  transition: 0.5s all ease;
+}
+
+.menu-item {
+  font-size: 0.9rem;
 }
 
 .navbar-toggler-icon i.fas.fa-bars {
@@ -17,8 +39,24 @@ img.custom-logo {
 
 a.custom-logo-link {
   flex: 1;
+  text-align: center;
 }
 
 header > .container {
   display: flex;
+  flex-direction: column;
+}
+
+// タブレットサイズ以下ではロゴとtoggleボタンを横並びにする
+@media (max-width: 768px) {
+  header > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
