@@ -71,6 +71,11 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /**
+     * Custom Logo
+     */
+    add_theme_support('custom-logo');
 }, 20);
 
 /**
