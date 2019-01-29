@@ -147,4 +147,7 @@ function site_manuals() {
 
 add_action('admin_menu', 'site_manuals');
 
+/** wp-bootstrap-navwalker */
+// Include custom navwalker
+require_once('bs4navwalker.php');
 

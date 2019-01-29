@@ -71,6 +71,11 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /**
+     * Custom Logo
+     */
+    add_theme_support('custom-logo');
 }, 20);
 
 /**
@@ -78,7 +83,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget col-md-3 col-6 %1$s">',
+        'before_widget' => '<section class="widget col-lg-3 col-6 %1$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
@@ -91,10 +96,16 @@ add_action('widgets_init', function () {
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
+    $configads = [
+        'before_widget' => '<section class="widget col-md-6 col-6 %1$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ];    
     register_sidebar([
         'name'          => __('Footer Ads', 'sage'),
-        'id'            => 'footerads-primary'
-        ] + $config);
+        'id'            => 'sidebar-footerads'
+        ] + $configads);
 });
 
 /**
