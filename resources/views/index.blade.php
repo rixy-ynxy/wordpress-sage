@@ -9,7 +9,7 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
-  <div class="row">
+  <div class="column">
   @while (have_posts()) @php the_post() @endphp  
     @include('partials.content-'.get_post_type())
   @endwhile
