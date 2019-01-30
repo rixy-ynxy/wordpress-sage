@@ -1,4 +1,4 @@
-<article @php post_class('archive') @endphp>
+<article @php post_class('archiveList') @endphp>
   @if ( !is_post_type_archive('members'))
   <p class="ibyline author vcard">
     <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
