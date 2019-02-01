@@ -17,7 +17,7 @@ class App extends Controller
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return __('最新の投稿', 'sage');
+            return __('Update Resolution', 'sage');
         }
         if (is_archive()) {
             return get_the_archive_title();
