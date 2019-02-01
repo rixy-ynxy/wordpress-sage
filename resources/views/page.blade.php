@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<h1 class="page-title">{{ get_the_title() }}</h1>
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
