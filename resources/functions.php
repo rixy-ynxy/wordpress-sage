@@ -122,12 +122,20 @@ function site_manual() {
         <?php
     }
 
+    /**
+     * 管理画面メニュー追加
+     */
+add_action('admin_menu', 'site_manuals');
+
+// function my_plugin_menu() {
+//     add_options_page()
+// }
 function site_manuals() {
     add_menu_page(
         'RemoCaトリセツ',
         'RemoCaトリセツ',
-        'edit_themes',
-        'manual',
+        'read',
+        'remoca-manual',
         'site_manual',
         '',
         2
@@ -145,9 +153,6 @@ function site_manuals() {
     }
 }
 
-add_action('admin_menu', 'site_manuals');
-
 /** wp-bootstrap-navwalker */
 // Include custom navwalker
 require_once('bs4navwalker.php');
-
