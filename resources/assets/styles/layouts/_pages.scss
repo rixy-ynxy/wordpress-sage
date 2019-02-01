@@ -1,0 +1,25 @@
+.page-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.page-content h2::before {
+  content: '';
+  width: 100px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 25px;
+  background: lightgray;
+}
+
+.page-content h2::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 25px;
+  background: lightgray;
+  right: 0;
+}
