@@ -20,6 +20,22 @@
           'walker'          => new bs4navwalker()
         ]) !!}
       @endif
+      @if(is_user_logged_in())
+        @if (has_nav_menu('primary_navigation'))
+        {!! wp_nav_menu([
+          'menu'            => 'メンバーナビゲーション',
+          'theme_location' => 'member_navigation',
+          'container'       => 'div',
+          'container_id'    => 'member-login',
+          'container_class' => 'collapse navbar-collapse',
+          'menu_id'         => false,
+          'menu_class'      => 'navbar-nav mr-auto',
+          'depth'           => 2,
+          'fallback_cb'     => 'bs4navwalker::fallback',
+          'walker'          => new bs4navwalker()
+        ]) !!}
+      @endif
+      @endif
     </nav>
   </div>
 </header>
