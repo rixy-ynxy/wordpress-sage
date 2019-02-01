@@ -1,0 +1,24 @@
+.page-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.page-content h2::after {
+  content: '';
+  width: 30%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 25px;
+  background: lightgray;
+  right: 0;
+}
+
+/**
+小型PCを基準に */
+@media screen and (max-width: 960px) {
+  .page-content h2::after,
+  .page-content h2::before {
+    display: none;
+  }
+}
