@@ -34,7 +34,12 @@
           'fallback_cb'     => 'bs4navwalker::fallback',
           'walker'          => new bs4navwalker()
         ]) !!}
-      @endif
+        @endif
+        @php
+          echo '<button type="button" class="btn btn-outline-primary"><a href="' . wp_logout_url() . '">ログアウト</a></button>'
+        @endphp
+      @else
+        <button type="button" class="btn btn-outline-primary"><a href="/login">ログイン</a></button>
       @endif
     </nav>
   </div>
