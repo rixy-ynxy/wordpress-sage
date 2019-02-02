@@ -7,9 +7,6 @@
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}
     </div>
-    <div class="entry-tag">
-      @php the_tags() @endphp
-    </div>
     {!! get_search_form(false) !!}
   @endif
   <div class="column">

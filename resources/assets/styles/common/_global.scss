@@ -30,3 +30,17 @@ p {
   line-height: 1.5;
   padding-left: 10px;
 }
+
+a {
+  color: gray;
+}
+
+/*
+* 960px（小型PC）基準をブレイクポイント
+*/
+
+@media screen and (max-width: 960px) {
+  time {
+    display: none;
+  }
+}

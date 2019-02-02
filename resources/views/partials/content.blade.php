@@ -12,7 +12,7 @@
     <div class="entry-summary">
       @include('partials/entry-meta')
       <div class="entry-tag">
-        @php the_tags() @endphp
+        @php the_tags( '<ul><li>', '</li><li>', '</li></ul>') @endphp
       </div>
     </div>
   </header>

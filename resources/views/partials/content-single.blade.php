@@ -6,7 +6,7 @@
   <div class="entry-content">
     @php the_content() @endphp
     <div class="entry-tag">
-      @php the_tags() @endphp
+      @php the_tags( '<ul><li>', '</li><li>', '</li></ul>') @endphp
     </div>
   </div>
   <footer>
