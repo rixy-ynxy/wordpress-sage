@@ -11,6 +11,9 @@
     <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
     <div class="entry-summary">
       @include('partials/entry-meta')
+      <div class="entry-tag">
+        @php the_tags() @endphp
+      </div>
     </div>
   </header>
 
