@@ -120,3 +120,25 @@ a.page-numbers:hover {
   border-color: transparent;
   width: 50%;
 }
+
+.entry-tag ul {
+  display: flex;
+}
+
+.entry-tag ul li {
+  list-style-type: none;
+  padding: 0 1%;
+  font-size: 12px;
+  margin: 0 1%;
+  border-radius: 5px;
+}
+
+/*
+* 小型PC(960px)以下で切り替え
+*/
+
+@media screen and (max-width: 960px) {
+  .archiveList {
+    display: table;
+  }
+}
