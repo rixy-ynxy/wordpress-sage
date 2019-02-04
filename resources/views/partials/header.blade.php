@@ -26,7 +26,7 @@
           'menu'            => 'メンバーナビゲーション',
           'theme_location' => 'member_navigation',
           'container'       => 'div',
-          'container_id'    => 'member-login',
+          'container_id'    => 'bs4navbar',
           'container_class' => 'collapse navbar-collapse',
           'menu_id'         => false,
           'menu_class'      => 'navbar-nav mr-auto',
