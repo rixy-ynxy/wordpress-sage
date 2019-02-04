@@ -1,3 +1,8 @@
+article header {
+  max-width: 600px;
+  margin: auto;
+}
+
 .archiveList {
   padding: 15px 10px;
   background: white;
@@ -14,8 +19,6 @@
 .entry-title {
   font-size: 1.4em;
   margin-bottom: 3%;
-  border-bottom: solid 4px rgba(76, 175, 80, 0.6);
-  border-radius: 0 0 160px 180px/0 0 20px 4px;
 }
 
 .entry-summary {
@@ -48,8 +51,6 @@ time.updated {
   padding: 0.5em;
   color: #494949;
   background-color: #fffaf4;
-  border-left: solid 5px #ffaf58;
-  width: 35%;
 }
 
 iframe.wp-embedded-content {
@@ -121,11 +122,15 @@ a.page-numbers:hover {
   width: 50%;
 }
 
-.entry-tag ul {
+ul.entry-tag {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: flex-end;
+  margin: 2% 0;
 }
 
-.entry-tag ul li {
+ul.entry-tag li {
   list-style-type: none;
   padding: 0 1%;
   font-size: 12px;
