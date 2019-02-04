@@ -36,10 +36,10 @@
         ]) !!}
         @endif
         @php
-          echo '<button type="button" class="btn btn-outline-primary"><a href="' . wp_logout_url() . '">ログアウト</a></button>'
+          echo '<a href="' . wp_logout_url() . '"><button type="button" class="btn btn-outline-primary">ログアウト</button></a>'
         @endphp
       @else
-        <button type="button" class="btn btn-outline-primary"><a href="/login">ログイン</a></button>
+        <a href="/login"><button type="button" class="btn btn-outline-primary">ログイン</button></a>
       @endif
     </nav>
   </div>
