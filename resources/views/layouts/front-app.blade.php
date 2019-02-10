@@ -10,11 +10,6 @@
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content">
-				@php
-				$page_id = 3154;
-				$content = get_page($page_id);
-				echo $content -> post_content;
-				@endphp
         <main class="main">
           @yield('content')
         </main>

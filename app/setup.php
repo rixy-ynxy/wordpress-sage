@@ -94,7 +94,7 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
+        'name'          => __('フッター4カラム', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
     $configads = [
@@ -104,9 +104,23 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];    
     register_sidebar([
-        'name'          => __('Footer Ads', 'sage'),
+        'name'          => __('フッター広告2カラム', 'sage'),
         'id'            => 'sidebar-footerads'
         ] + $configads);
+    $configFront = [
+        'before_widget' => '<section class="widget %1$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ];
+    register_sidebar([
+        'name'          => __('フロントページ上部', 'sage'),
+        'id'            => 'sidebar-frontup'
+    ] + $configFront);
+    register_sidebar([
+        'name'          => __('フロントページ下部', 'sage'),
+        'id'            => 'sidebar-frontdown'
+    ] + $configFront);
 });
 
 /**
