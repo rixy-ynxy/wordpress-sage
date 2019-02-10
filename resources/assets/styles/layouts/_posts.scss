@@ -3,6 +3,10 @@ article header {
   margin: auto;
 }
 
+time.updated {
+  font-size: small;
+}
+
 .archiveList {
   padding: 15px 10px;
   background: white;
@@ -10,10 +14,20 @@ article header {
   max-width: 600px;
   margin: 2% auto;
   display: flex;
-}
 
-.archiveList header {
-  flex: 5;
+  header {
+    flex: 5;
+  }
+
+  h2.entry-title {
+    font-size: 1em;
+    border: none;
+    margin-right: 20px;
+  }
+
+  time.updated {
+    flex: 1;
+  }
 }
 
 .entry-title {
@@ -23,10 +37,6 @@ article header {
 
 .entry-summary {
   display: flex;
-}
-
-time.updated {
-  font-size: small;
 }
 
 .posts-cat {
@@ -64,19 +74,9 @@ iframe.wp-embedded-content {
   margin: auto;
 }
 
-.archiveList h2.entry-title {
-  font-size: 1em;
-  border: none;
-  margin-right: 20px;
-}
-
-.archiveList time.updated {
-  flex: 1;
-}
-
 .ibyline.author.vcard {
   flex: 1;
-  margin: 0;
+  margin: auto;
 }
 
 .ibyline.author.vcard img {
@@ -159,5 +159,9 @@ ul.entry-tag li {
   .entry-tag ul {
     display: block;
     margin: 8% 0;
+  }
+
+  .tool {
+    display: block;
   }
 }

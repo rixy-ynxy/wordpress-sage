@@ -1,3 +1,6 @@
 <div class="page-header text-center">
-  <h1>{!! App::title() !!}</h1>
+  @if (is_front_page())
+  @else
+    <h1>{!! App::title() !!}</h1>
+  @endif
 </div>
