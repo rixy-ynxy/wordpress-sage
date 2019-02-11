@@ -3,7 +3,7 @@
   @include('partials.head')
   <body @php body_class() @endphp>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GPV993"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXC5DPW"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->    
     @php do_action('get_header') @endphp
