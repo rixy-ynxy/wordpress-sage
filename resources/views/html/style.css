@@ -1,0 +1,36 @@
+.slack {
+    display: flex;
+    text-align: center;
+}
+
+.slack a {
+    flex: 1;
+}
+
+.summary.entry-summary {
+    display: contents;
+}
+
+.search .content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.page-id-181 .content {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a, btn {
+    font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+    font-weight: 200;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 14px;
+    margin: 2% 0;
+}
