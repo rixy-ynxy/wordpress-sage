@@ -3,10 +3,6 @@ article header {
   margin: auto;
 }
 
-time.updated {
-  font-size: small;
-}
-
 .archiveList {
   padding: 15px 10px;
   background: white;
@@ -30,27 +26,6 @@ time.updated {
   }
 }
 
-.entry-title {
-  font-size: 1.4em;
-  margin-bottom: 3%;
-}
-
-.entry-summary {
-  display: flex;
-}
-
-.posts-cat {
-  flex: 2;
-}
-
-.posts-cat a {
-  background: lightgray;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
-  font-size: 0.8rem;
-}
-
 .entry-content {
   max-width: 600px;
   margin: auto;
@@ -72,15 +47,6 @@ iframe.wp-embedded-content {
   max-width: 100%;
   display: block;
   margin: auto;
-}
-
-.ibyline.author.vcard {
-  flex: 1;
-  margin: auto;
-}
-
-.ibyline.author.vcard img {
-  border-radius: 100%;
 }
 
 // ページネーション
@@ -127,22 +93,6 @@ a.page-numbers:hover {
   width: 50%;
 }
 
-ul.entry-tag {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  justify-content: flex-end;
-  margin: 2% 0;
-}
-
-ul.entry-tag li {
-  list-style-type: none;
-  padding: 0 1%;
-  font-size: 12px;
-  margin: 0 1%;
-  border-radius: 5px;
-}
-
 /*
 * 小型PC(960px)以下で切り替え
 */
@@ -150,15 +100,6 @@ ul.entry-tag li {
 @media screen and (max-width: 960px) {
   .archiveList {
     display: table;
-  }
-
-  .entry-summary {
-    display: block;
-  }
-
-  .entry-tag ul {
-    display: block;
-    margin: 8% 0;
   }
 
   .tool {
