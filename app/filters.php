@@ -80,3 +80,14 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('get_the_archive_title', function($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false) . 'の記事一覧';
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false). 'の記事一覧';
+    } elseif (is_author()) {
+        $title = '<span class="vcard">' .get_the_author() . '</span>'. 'の記事一覧';
+    }
+    return $title;
+});

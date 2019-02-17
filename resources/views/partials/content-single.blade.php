@@ -18,6 +18,10 @@
         <h2>調べてみたこと</h2>
         <p>@php the_field('Investigate') @endphp</p>
       @endif
+      @if (get_field('slack'))
+        <h2>Slackでやりとりされている場所</h2>
+        <p><a href="{{ the_field('slack') }}"><button type="button" class="btn btn-primary">Slackでコメントする</button></a></p><hr>
+      @endif
     @endif
     @php the_content() @endphp
   </div>
