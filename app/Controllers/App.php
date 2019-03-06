@@ -30,4 +30,9 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function getTemplate() {
+        $template = apply_filters('sage/unwrap_' . $this->slug, $this->template) ?: $this->template;
+        return locate_template($template) ?: locate_template('woocommerce/'. $template);
+    }
 }
