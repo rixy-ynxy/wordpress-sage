@@ -166,3 +166,8 @@ if ( !(is_admin() ) ) {
     }
     add_filter( 'script_loader_tag', 'replace_scripttag' );
 }
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}

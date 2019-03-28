@@ -6,7 +6,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXC5DPW"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->    
-    @php do_action('get_header') @endphp
+    @php do_action('get_header', 'shop') @endphp
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content">
@@ -20,7 +20,7 @@
         @endif
       </div>
     </div>
-    @php do_action('get_footer') @endphp
+    @php do_action('get_footer', 'shop') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp
   </body>
