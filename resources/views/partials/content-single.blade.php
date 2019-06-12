@@ -4,25 +4,6 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
-    @if (is_user_logged_in())
-    
-      @if (get_field('question')) 
-        <h2>質問内容</h2>
-        <p>{{ the_field('question') }}</p>
-      @endif
-      @if (get_field('goal'))
-        <h2>ゴール地点</h2>
-        <p>@php the_field('goal') @endphp</p>
-      @endif
-      @if (get_field('Investigate'))
-        <h2>調べてみたこと</h2>
-        <p>@php the_field('Investigate') @endphp</p>
-      @endif
-      @if (get_field('slack'))
-        <h2>Slackでやりとりされている場所</h2>
-        <p><a href="{{ the_field('slack') }}"><button type="button" class="btn btn-primary">Slackでコメントする</button></a></p><hr>
-      @endif
-    @endif
     @php the_content() @endphp
   </div>
   <footer>

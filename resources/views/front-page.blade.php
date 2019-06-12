@@ -15,7 +15,6 @@
 
   <section id="diversity">
     @php dynamic_sidebar('sidebar-frontup') @endphp
-    @include('partials.cat-box')
   </section>
 
   <section id="problem-solving">

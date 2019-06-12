@@ -1,10 +1,5 @@
   <footer class="content-info">
     <div class="container">
-      <section id="footerAds">
-        <div class="row text-center">
-          @include('partials.sidebar-footerads')
-        </div>
-      </section>
       <section id="footer-menu">
         <div class="row">
           @include('partials.sidebar-footer')

@@ -20,27 +20,6 @@
           'walker'          => new bs4navwalker()
         ]) !!}
       @endif
-      @if(is_user_logged_in())
-        @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu([
-          'menu'            => 'メンバーナビゲーション',
-          'theme_location' => 'member_navigation',
-          'container'       => 'div',
-          'container_id'    => 'bs4navbar',
-          'container_class' => 'collapse navbar-collapse',
-          'menu_id'         => false,
-          'menu_class'      => 'navbar-nav mr-auto',
-          'depth'           => 2,
-          'fallback_cb'     => 'bs4navwalker::fallback',
-          'walker'          => new bs4navwalker()
-        ]) !!}
-        @endif
-        @php
-          echo '<a href="' . wp_logout_url() . '"><button type="button" class="btn btn-outline-primary">ログアウト</button></a>'
-        @endphp
-      @else
-        <a href="/login"><button type="button" class="btn btn-outline-primary">ログイン</button></a>
-      @endif
     </nav>
   </div>
 </header>
