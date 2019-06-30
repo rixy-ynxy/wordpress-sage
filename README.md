@@ -1,8 +1,9 @@
-## WordPress Sageを題材にしたWebサイトをチーム作成するためのpublicリポジトリです ## 
+## WordPress Sage
+- Webサイトをチーム作成するためのpublicリポジトリです
 - WordPressサイトのテーマ見本をつくる参考記事一覧  
 https://plusers.net/wordpress_theme_3
 
-## 機能改善やアイデアの提案方法　##
+## 機能改善やアイデアの提案方法
 - issueを使って提案してください。
   
 ### ブランチの仕様用途
@@ -10,7 +11,7 @@ https://plusers.net/wordpress_theme_3
 - develop → 開発環境のmaster。ここから`git pull`して作業開始  
 - feature/ → 開発ブランチの接頭語。`feature/1`などで追加する。  
 
-### 「ブランチ命名のめやす」  ###
+### 「ブランチ命名のめやす」
 - [feature/issue番号/作業アクション]のようにしていく（ファイル拡張子は除く）  
 - 例： `feature/1/widget_add` → （追加する/footer.blade.phpに/ウィジェットを追加）  
 
