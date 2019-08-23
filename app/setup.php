@@ -97,7 +97,7 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-footer'
     ] + $config);
     $configFront = [
-        'before_widget' => '<section class="widget %1$s w-50 m-auto text-center">',
+        'before_widget' => '<section class="widget %1$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>'
