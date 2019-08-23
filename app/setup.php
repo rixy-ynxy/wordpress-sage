@@ -46,7 +46,6 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary', 'sage'),
         'footer_navigation' => __('フッター', 'sage'),
-        'member_navigation' => __('メンバーナビ', 'sage'),
     ]);
 
     /**
@@ -86,8 +85,8 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget col-lg-3 col-6 %1$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ];
     register_sidebar([
         'name'          => __('Primary', 'sage'),
@@ -98,14 +97,14 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-footer'
     ] + $config);
     $configFront = [
-        'before_widget' => '<section class="widget %1$s">',
+        'before_widget' => '<section class="widget %1$s w-50 m-auto text-center">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('フロントページ上部', 'sage'),
-        'id'            => 'sidebar-frontup'
+        'name'          => __('インフォメーション', 'sage'),
+        'id'            => 'sidebar-front-information'
     ] + $configFront);
     register_sidebar([
         'name'          => __('フロントページ下部', 'sage'),
