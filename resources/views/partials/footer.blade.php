@@ -21,7 +21,7 @@
         @endif
       </div>
       <p class="text-center small">
-          &copy;2018
+          &copy;2019
           @if (date("Y")!=2018)
             @php echo date("-Y"); @endphp
           @endif
