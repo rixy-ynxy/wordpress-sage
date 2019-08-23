@@ -13,7 +13,7 @@
     @include('partials.content-'.get_post_type())
   @endwhile
 
-  <section id="information" class="w-50 mx-auto my-5 text-center">
+  <section id="information" class="w-100 mx-auto my-5 text-center">
     @php dynamic_sidebar('sidebar-front-information') @endphp
   </section>
 
