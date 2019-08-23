@@ -83,7 +83,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget col-lg-4 %1$s">',
+        'before_widget' => '<section class="widget col-sm %1$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>'
