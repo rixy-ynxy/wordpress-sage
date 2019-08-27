@@ -25,7 +25,10 @@ h5 {
   margin: 0 0 0.3em;
 }
 
-p {
+p,
+th,
+td,
+li {
   font-size: 14px;
   line-height: 1.5;
   padding-left: 10px;
@@ -33,11 +36,6 @@ p {
 
 a {
   color: gray;
-}
-
-.col-6.col-md-4 {
-  background: #ade6d633;
-  border: 2px solid white;
 }
 
 /*
