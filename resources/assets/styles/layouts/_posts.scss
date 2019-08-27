@@ -29,6 +29,14 @@ article header {
 .entry-content {
   max-width: 600px;
   margin: auto;
+
+  a {
+    color: gray;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: crimson;
+    margin: 2%;
+  }
 }
 
 .entry-content h2 {
