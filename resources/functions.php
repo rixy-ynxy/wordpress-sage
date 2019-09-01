@@ -96,62 +96,6 @@ function remove_dashboard_widget() {
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
     remove_meta_box('dashboard_primary', 'dashboard', 'side');
 }
-add_action('wp_dashboard_setup', 'remove_dashboard_widget');
-
-function site_manual() {
-    ?>
-    <div class="wrapper">
-        <h1>RemoCa規約</h1>
-            <?php 
-                $page_info = get_page_by_path('remoca-manual');
-                echo apply_filters('the_content', $page_info->post_content);
-            ?>
-    </div>
-    <?php
-}
-
-    function site_manual_sub1() {
-    ?>
-        <div class="wrapper">
-            <h1>運営が利用するツール</h1>
-            <?php 
-                $page_info = get_page_by_path('conferences-tool');
-                echo apply_filters('the_content', $page_info->post_content);
-            ?>
-        </div>
-        <?php
-    }
-
-    /**
-     * 管理画面メニュー追加
-     */
-add_action('admin_menu', 'site_manuals');
-
-// function my_plugin_menu() {
-//     add_options_page()
-// }
-function site_manuals() {
-    add_menu_page(
-        'RemoCaトリセツ',
-        'RemoCaトリセツ',
-        'read',
-        'remoca-manual',
-        'site_manual',
-        '',
-        2
-    );
-    if(current_user_can('administrator')) {
-        add_menu_page(
-            '運営ツール',
-            '運営ツール',
-            'manage_options',
-            'conferences-tool',
-            'site_manual_sub1',
-            '',
-            3
-        );
-    }
-}
 
 /** wp-bootstrap-navwalker */
 // Include custom navwalker
