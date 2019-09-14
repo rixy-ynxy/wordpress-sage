@@ -16,7 +16,6 @@ article header {
   }
 
   h2.entry-title {
-    font-size: 1em;
     border: none;
     margin-right: 20px;
   }
@@ -33,22 +32,19 @@ article header {
   a {
     color: gray;
     text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: crimson;
     margin: 2%;
   }
-}
 
-.entry-content h2 {
-  background: #f3f3f3;
-  padding-left: 20px;
-}
+  h2 {
+    padding-left: 20px;
+    font-weight: bold;
+  }
 
-.entry-content h3 {
-  font-size: 1.3em;
-  padding: 0.5em;
-  color: #494949;
-  background-color: #fffaf4;
+  h3 {
+    padding: 5px 5px 5px 10px;
+    color: #494949;
+    border-left: 2px solid lightgray;
+  }
 }
 
 iframe.wp-embedded-content {
