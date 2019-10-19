@@ -44,8 +44,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary', 'sage'),
-        'footer_navigation' => __('フッター', 'sage'),
+        'primary_navigation' => __('Sidebar', 'sage'),
+        'footer_navigation' => __('Footer', 'sage'),
     ]);
 
     /**
@@ -89,11 +89,11 @@ add_action('widgets_init', function () {
         'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
+        'name'          => __('Sidebar', 'sage'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('フッター4カラム', 'sage'),
+        'name'          => __('Footer 4カラム', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
     $configFront = [
@@ -103,7 +103,7 @@ add_action('widgets_init', function () {
         'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('インフォメーション', 'sage'),
+        'name'          => __('Front Page Information', 'sage'),
         'id'            => 'sidebar-front-information'
     ] + $configFront);
     register_sidebar([
