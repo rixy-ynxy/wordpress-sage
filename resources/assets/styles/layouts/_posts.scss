@@ -1,34 +1,4 @@
-article header {
-  max-width: 600px;
-  margin: auto;
-}
-
-.archiveList {
-  padding: 15px 10px;
-  background: white;
-  border-bottom: 1px solid lightgray;
-  max-width: 600px;
-  margin: 2% auto;
-  display: flex;
-
-  header {
-    flex: 5;
-  }
-
-  h2.entry-title {
-    border: none;
-    margin-right: 20px;
-  }
-
-  time.updated {
-    flex: 1;
-  }
-}
-
 .entry-content {
-  max-width: 600px;
-  margin: auto;
-
   a {
     color: gray;
     text-decoration: underline;
@@ -37,13 +7,11 @@ article header {
 
   h2 {
     padding-left: 20px;
-    font-weight: bold;
   }
 
   h3 {
     padding: 5px 5px 5px 10px;
     color: #494949;
-    border-left: 2px solid lightgray;
   }
 }
 
@@ -78,18 +46,8 @@ iframe.wp-embedded-content {
   margin: 0 5px;
   padding: 5px 0;
   text-decoration: none;
-  color: #2d3877;
-  border: 1px solid #2d3877;
   border-radius: 3px;
-}
-
-a.page-numbers:hover {
-  background-color: #b7c0f8;
-}
-
-.pagination li span.page-numbers.current {
-  color: #fff;
-  background-color: #2d3877;
+  border: 1px solid;
 }
 
 .pagination li .dots {
