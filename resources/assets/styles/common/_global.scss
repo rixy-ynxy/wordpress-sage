@@ -4,14 +4,12 @@ body {
 
 h1 {
   font-size: 30px;
-  margin-bottom: 30px;
-  margin-top: 20px;
 }
 
 h2 {
   font-size: 20px;
   padding: 15px 0;
-  margin: 30px 0;
+  margin-bottom: 30px;
   position: relative;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
@@ -24,12 +22,13 @@ h3 {
 
 h4 {
   font-size: 14px;
-  margin: 0 0 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 h5 {
   font-size: 14px;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 p,
@@ -37,8 +36,16 @@ th,
 td,
 li {
   font-size: 14px;
-  line-height: 2;
+  line-height: 1.7;
   padding-left: 10px;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 dt {
