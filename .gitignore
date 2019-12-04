@@ -10,3 +10,4 @@ resources/assets/config-local.json
 .DS_Store
 yarn.lock
 html
+style.css
