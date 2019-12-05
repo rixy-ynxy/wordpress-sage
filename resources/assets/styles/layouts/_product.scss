@@ -1,0 +1,17 @@
+ul.product_list_widget {
+  display: flex;
+}
+
+.product_list_widget img {
+  max-width: 150px;
+}
+
+.product-title {
+  display: block;
+  max-width: 150px;
+  padding: 3px;
+}
+
+.product_list_widget li {
+  font-size: 12px;
+}

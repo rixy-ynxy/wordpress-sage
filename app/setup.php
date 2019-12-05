@@ -89,11 +89,15 @@ add_action('widgets_init', function () {
         'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('Sidebar', 'sage'),
+        'name'          => __('サイドバー', 'sage'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer 4カラム', 'sage'),
+        'name'          => __('個別投稿の記事後', 'sage'),
+        'id'            => 'posted-cts'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('フッター 4カラム', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
     $configFront = [
@@ -103,7 +107,7 @@ add_action('widgets_init', function () {
         'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('Front Page Information', 'sage'),
+        'name'          => __('フロントページ コンテンツ下部', 'sage'),
         'id'            => 'sidebar-front-information'
     ] + $configFront);
     register_sidebar([

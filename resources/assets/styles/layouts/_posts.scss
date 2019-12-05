@@ -8,6 +8,33 @@
   }
 }
 
+// Related Post
+.related-posts {
+  li {
+    display: flex;
+  }
+
+  img {
+    height: 150px;
+    object-fit: contain;
+  }
+
+  a {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .text {
+    padding: 3px;
+    font-size: 12px;
+  }
+}
+
 iframe.wp-embedded-content {
   max-width: 100%;
   display: block;
