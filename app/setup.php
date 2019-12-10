@@ -107,12 +107,12 @@ add_action('widgets_init', function () {
         'after_title'   => '</h2>'
     ];
     register_sidebar([
-        'name'          => __('フロントページ コンテンツ下部', 'sage'),
-        'id'            => 'sidebar-front-information'
+        'name'          => __('フロントページ上部', 'sage'),
+        'id'            => 'frontup'
     ] + $configFront);
     register_sidebar([
         'name'          => __('フロントページ下部', 'sage'),
-        'id'            => 'sidebar-frontdown'
+        'id'            => 'frontdown'
     ] + $configFront);
 });
 
