@@ -85,8 +85,8 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget col-sm %1$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>'
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
     ];
     register_sidebar([
         'name'          => __('サイドバー', 'sage'),
@@ -97,14 +97,18 @@ add_action('widgets_init', function () {
         'id'            => 'posted-cts'
     ] + $config);
     register_sidebar([
+        'name'          => __('固定ページの記事後', 'sage'),
+        'id'            => 'paged-cts'
+    ] + $config);
+    register_sidebar([
         'name'          => __('フッター 4カラム', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
     $configFront = [
         'before_widget' => '<section class="widget %1$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>'
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
     ];
     register_sidebar([
         'name'          => __('フロントページ上部', 'sage'),

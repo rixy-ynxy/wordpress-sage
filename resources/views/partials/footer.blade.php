@@ -1,4 +1,4 @@
-  <footer class="content-info">
+  <footer class="mt-5 p-3">
     <div class="container">
       <section id="footer-menu">
         <div class="row">

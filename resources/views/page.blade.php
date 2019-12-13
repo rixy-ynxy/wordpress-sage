@@ -7,6 +7,9 @@
       @include('partials.page-header')
       @include('partials.content-page')
     @endwhile
+    <section>
+      @php dynamic_sidebar('paged-cts') @endphp
+    </section>
   </div>
   <div class="col-md-4">
     @php dynamic_sidebar('sidebar-primary') @endphp
