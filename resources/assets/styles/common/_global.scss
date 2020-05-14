@@ -69,6 +69,11 @@ time {
   font-size: 12px;
 }
 
+blockquote {
+  background: #f3f3f3;
+  padding: 2%;
+}
+
 @media screen and (max-width: 768px) {
   .w-50 {
     width: 90% !important;
