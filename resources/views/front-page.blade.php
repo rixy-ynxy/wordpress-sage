@@ -13,13 +13,8 @@
     @include('partials.content-'.get_post_type())
   @endwhile
 
-  <section class="w-50 mx-auto my-5">
-    @php dynamic_sidebar('frontup') @endphp
-  </section>
-
-  <section class="w-50 mx-auto my-5">
-    @php dynamic_sidebar('frontdown') @endphp
-  </section>
-
+  <div class="col-md-4">
+    @php dynamic_sidebar('sidebar-primary') @endphp
+  </div>
 
 @endsection
